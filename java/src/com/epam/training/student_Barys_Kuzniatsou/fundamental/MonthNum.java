@@ -7,11 +7,12 @@ public class MonthNum {
     public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
     int monthNum = 0;
-    do
-    {
+
     System.out.print("Enter the number of month: ");
-    monthNum = input.nextInt();
-    } while (monthNum > 12 || monthNum < 1);
+    if (input.hasNextInt())
+      {
+      monthNum = input.nextInt();
+     }
 
     switch(monthNum)
     {
@@ -27,6 +28,7 @@ public class MonthNum {
     case(10): System.out.println("Oct"); break;
     case(11): System.out.println("Nov"); break;
     case(12): System.out.println("Dec"); break;
+    default: System.out.println("Error data"); break;
     }
     }
 }
