@@ -10,7 +10,7 @@ public class OutputLineBreak {
     Scanner input = new Scanner(System.in);         //объявляем Scanner
     System.out.print("Enter number of values: ");   //вывод запроса на количество значений
     int numValues = input.nextInt();                //присвоение переменной количества значений
-    double[] array = new double[numValues];         //объявление массмва
+    double[] array = new double[numValues];         //объявление массива
     int i = 0;                                      //инициализация переменной цикла
 
     Random random = new Random();                   //объявляем Random
