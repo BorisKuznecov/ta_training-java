@@ -94,5 +94,24 @@ public class OptionalTask2 {
             System.out.println("\n");
         }
 
+        /*TASK 4*///----------------------------------------------------------------------------------------------------
+        int[][] arrayTask4 = new int[nMatrixDimension][nMatrixDimension];   // массив для задания 4
+        int valueMax = 0;                                                   // максимальный элемент
+        int valueMaxColumn = 0;                                             // графа с максимальным элементом
+        int valueMaxRow = 0;                                                // строка с максимальным элементом
+
+        for (i = 0; i < nMatrixDimension; i++) {
+            for (j = 0; j < nMatrixDimension; j++) {
+                arrayTask4[i][j] = array [i][j];
+            }
+        }
+
+        for (i = 0; i < nMatrixDimension; i++) {
+            for (j = 0; j < nMatrixDimension; j++) {
+                if (arrayTask4[i][j] > valueMax) {
+                    valueMax = arrayTask4[i][j];
+                }
+            }
+        }
     }
 }

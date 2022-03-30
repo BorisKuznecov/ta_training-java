@@ -1,14 +1,14 @@
 package com.epam.training.student_Barys_Kuzniatsou.fundamental;
 
 import java.util.Scanner;
-//second task
+
+//second task   2.     Отобразить в окне консоли аргументы командной строки в обратном порядке.
 public class ReverseArgs {
     public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    System.out.print("Enter string: ");                 //ввод строки
-    String stringEntry =  input.nextLine();             //инициализация переменной
-    StringBuffer buffer = new StringBuffer(stringEntry);//объявление и инициализация StringBuffer с переменной buffer
-    buffer.reverse();                                   //метод reverse()
-    System.out.println(buffer);                         //вывод в консоль переменной buffer
+        Scanner inputFromConsole = new Scanner(System.in);
+        System.out.print("Enter string to reverse: ");
+        String stringEntry =  inputFromConsole.nextLine();                      // инициализация переменной вводом строки
+        StringBuffer bufferForStringEntry = new StringBuffer(stringEntry);      // объявление и инициализация StringBuffer с переменной buffer
+        System.out.println("Reverse string: " + bufferForStringEntry.reverse());// вывод в консоль переменной buffer с применением метода reverse
     }
 }

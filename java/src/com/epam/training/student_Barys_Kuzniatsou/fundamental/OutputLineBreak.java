@@ -4,36 +4,39 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
 
-//third task
+//third task    3.     Вывести заданное количество случайных чисел с переходом и без перехода на новую строку
 public class OutputLineBreak {
     public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);         //объявляем Scanner
-    System.out.print("Enter number of values: ");   //вывод запроса на количество значений
-    int numValues = input.nextInt();                //присвоение переменной количества значений
-    double[] array = new double[numValues];         //объявление массива
-    int i = 0;                                      //инициализация переменной цикла
+        System.out.print("Enter number of values: ");
+        int arrayDimension = getIntValueFromConsole();                              // размерность массива
 
-    Random random = new Random();                   //объявляем Random
+        double[] array = new double[arrayDimension];                                // объявление массива
+        for (int i = 0; i < arrayDimension; i++) {                                  // цикл ининциализации массива значениями
+            array[i] = getRandomDoubleValue();
+        }
 
-    for (i = 0; i < numValues; i++)                 //цикл инициализации массива
-       {
-       array[i] = random.nextDouble();
-       System.out.println("Random value №" + (i+1)+ ": " + array[i]);
-       }
-
-    System.out.println("Output of values in line: ");
-    /*for (i = 0; i < numValues; i++)                 //цикл вывода значений без перехода на новую строку
-       {
-       System.out.print(array[i] + " ");            //добавлен пробел для читаемости
-       }*/
-    System.out.println(Arrays.toString(array));
-    System.out.println("\n");                       //разделение вывода
-
-    System.out.println("Output of values (new line): ");
-    for (i = 0; i < numValues; i++)                 //цикл вывода значений с новой строки
-       {
-       System.out.println(array[i]);
-       }
+        arrayPrintToConsoleValuesInOneLine(array);                                  // вывод в одну строку
+        arrayPrintToConsoleValuesInNewline(array);                                  // вывод с новой строки
     }
 
+    private static int getIntValueFromConsole() {
+        Scanner inputFromConsole = new Scanner(System.in);                          //объявляем Scanner
+        return inputFromConsole.nextInt();                                          // возвращаем значение из консоли
+    }
+
+    private static double getRandomDoubleValue() {
+        Random randomDoubleValue = new Random();                                    // объявляем Random
+        return randomDoubleValue.nextDouble();                                      // возвращаем случайное значение
+    }
+
+    private static void arrayPrintToConsoleValuesInOneLine(double[] arrayToPrint) {
+        System.out.println("\nOutput of values in line: " + Arrays.toString(arrayToPrint));
+    }
+
+    private static void arrayPrintToConsoleValuesInNewline(double[] arrayToPrint) {
+        System.out.println("\nOutput of values (newline): ");
+        for (int i = 0; i < arrayToPrint.length; i++) {
+            System.out.println(arrayToPrint[i]);
+        }
+    }
 }
