@@ -8,10 +8,10 @@ import java.util.Arrays;
 public class OutputLineBreak {
     public static void main(String[] args) {
         System.out.print("Enter number of values: ");
-        int arrayDimension = getIntValueFromConsole();                              // размерность массива
+        int arrayDimension = getIntValueFromConsole();
 
-        double[] array = new double[arrayDimension];                                // объявление массива
-        for (int i = 0; i < arrayDimension; i++) {                                  // цикл ининциализации массива значениями
+        double[] array = new double[arrayDimension];
+        for (int i = 0; i < arrayDimension; i++) {
             array[i] = getRandomDoubleValue();
         }
 
@@ -20,13 +20,13 @@ public class OutputLineBreak {
     }
 
     private static int getIntValueFromConsole() {
-        Scanner inputFromConsole = new Scanner(System.in);                          //объявляем Scanner
-        return inputFromConsole.nextInt();                                          // возвращаем значение из консоли
+        Scanner inputFromConsole = new Scanner(System.in);
+        return inputFromConsole.nextInt();
     }
 
     private static double getRandomDoubleValue() {
-        Random randomDoubleValue = new Random();                                    // объявляем Random
-        return randomDoubleValue.nextDouble();                                      // возвращаем случайное значение
+        Random randomDoubleValue = new Random();
+        return randomDoubleValue.nextDouble();
     }
 
     private static void arrayPrintToConsoleValuesInOneLine(double[] arrayToPrint) {

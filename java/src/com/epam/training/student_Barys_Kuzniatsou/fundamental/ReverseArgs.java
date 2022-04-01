@@ -7,8 +7,8 @@ public class ReverseArgs {
     public static void main(String[] args) {
         Scanner inputFromConsole = new Scanner(System.in);
         System.out.print("Enter string to reverse: ");
-        String stringEntry =  inputFromConsole.nextLine();                      // инициализация переменной вводом строки
-        StringBuffer bufferForStringEntry = new StringBuffer(stringEntry);      // объявление и инициализация StringBuffer с переменной buffer
-        System.out.println("Reverse string: " + bufferForStringEntry.reverse());// вывод в консоль переменной buffer с применением метода reverse
+        String stringEntry =  inputFromConsole.nextLine();
+        StringBuffer bufferForStringEntry = new StringBuffer(stringEntry);
+        System.out.println("Reverse string: " + bufferForStringEntry.reverse());
     }
 }
